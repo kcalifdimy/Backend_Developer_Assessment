@@ -1,3 +1,19 @@
+# Prerequisites
+Before running the application, make sure you have the following prerequisites installed:
+
+- **Python 3.7+ (3.10+ recommended)**
+- **PostgreSQL**
+- **Docker**
+- **Docker Compose**
+
+# Installation
+Clone the repository:
+```sh
+git clone https://github.com/kcalifdimy/Backend_Developer_Assessment.git
+cd Backend_Developer_Assessment
+
+
+
 Prerequisites
 Before running the application, make sure you have the following prerequisites installed:
 
