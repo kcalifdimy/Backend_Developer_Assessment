@@ -1,0 +1,35 @@
+
+services:
+  fastapi:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: backend_assessment_local
+    container_name: backend_assessment
+    depends_on:
+      - db_postgres
+    volumes:
+      - .:/app:z
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    command: bash -c "alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+
+ 
+  db_postgres:  
+      image: postgres:14.3-alpine  
+      container_name: db_postgres  
+      restart: on-failure 
+      environment:
+        - POSTGRES_USER=postgres 
+        - POSTGRES_PASSWORD=postgres
+      ports:
+        - '5432:5432'
+      volumes:  
+        - db-postgres:/var/lib/postgresql/data  
+
+
+volumes:
+  db-postgres:
+    driver: local
