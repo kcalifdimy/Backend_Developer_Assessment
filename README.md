@@ -25,10 +25,6 @@ docker compose run fastapi alembic revision --autogenerate
 docker compose run fastapi alembic upgrade head
 
 
-
-
-
-
 python3 main.py
 API Endpoints
 The API exposes the following endpoints:
@@ -72,21 +68,11 @@ The response will be displayed below, showing the status code and response data.
 
 You can also view example request and response payloads, which can be helpful for understanding the expected data format.
 
-Testing the API with pytest Framework
-A suite of tests using the pytest framework was used to help verify the functionality of the Task Manager FastAPI.
 
-Running the tests
-Navigate to the task_manager_fastapi (root) directory using a terminal:
-cd <your_path_to_project>/task_manager_fastapi
-Run the tests by executing the following command (don't forget to activate your virtual environment if used):
-pytest
-This command will automatically discover and run the test cases defined in the tests directory.
+Potential Improvements:
 
-Potential Improvements
-Enhance My Task Manager FastAPI project with the following potential improvements:
-
-Create unit test:
-Becauseof time I was unable to create tests for the project
+Creating test:
+Because of time I was unable to write tests for the project
 
 Asynchronous Database Operations and Route Handlers:
 
